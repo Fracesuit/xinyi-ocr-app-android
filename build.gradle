@@ -1,0 +1,63 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.novoda:bintray-release:0.8.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+
+    ext {
+        //生产环境
+        PRODUCT_HOST = "\"139.159.238.236\""
+        PRODUCT_PORT = "8080"
+        PRODUCT_BAIDU_KEY = "\"CCiSzXCQSHsGFHqPGy9jSILnTN5CiPhg\""
+        PRODUCT_UMENG_KEY = "\"570761ed67e58ec4cd001328\""
+
+        //测试环境
+        DEV_HOST = "\"139.159.238.236\""
+        DEV_PORT = "8080"
+        DEV_BAIDU_KEY = "\"CCiSzXCQSHsGFHqPGy9jSILnTN5CiPhg\""
+        DEV_BAIDU_KEY = "\"570761ed67e58ec4cd001328\""
+
+        // Sdk and tools
+        buildToolsVersion = "27.0.0"
+        compileSdkVersion = 27
+        minSdkVersion = 15
+        targetSdkVersion = 23
+        versionCode = 1
+        versionName = "v1.00" + new Date().format(".yyyyMMdd")
+        //android
+        supportLibraryVersion = '27.1.0'
+
+        comm_version = "5.1"
+        userOrg = 'freedom'
+        repoName = "maven"
+        groupId = 'com.net.xinyi.rx1'
+        description = 'xinyi tool for android'
+        website = 'https://github.com/Fracesuit/freedom'
+        licences = ['Apache-2.0']
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

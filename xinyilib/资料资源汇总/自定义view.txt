@@ -1,0 +1,63 @@
+1.Measure过程
+https://blog.csdn.net/u011810352/article/details/79380439
+https://www.jianshu.com/p/158736a2549d
+
+
+2.Layout过程
+https://www.jianshu.com/p/bcfe3b7abe72
+
+
+3.draw过程
+https://blog.csdn.net/sinat_36668731/article/details/73801356
+https://mp.weixin.qq.com/s?__biz=MzIwODk1NTYzOQ==&mid=2247483667&idx=1&sn=a28d111858cdc0d9a37978d14ef7e2da&chksm=977a708ba00df99d77119f6d018d9c5b1cb9d0b67f7bb9d93efef3ba1bb51fb9767ad7b0414f&mpshare=1&scene=24&srcid=0930KFaJewIHcalg3XuBqcpQ#rd
+
+4.触摸
+http://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650242914&idx=1&sn=87e0e66951a9c102053cab8551916dd9&chksm=88638e0dbf14071b9ed1a8d0c935f0b0c66c96c348f667117d88cf4c29a13b8bed1e77c2f239&scene=0#rd
+https://mp.weixin.qq.com/s?__biz=MzI0MjE3OTYwMg==&mid=2649550048&idx=1&sn=613c0cf5bcd2050e960c195537cdc562&chksm=f118079dc66f8e8b372d9afcfb691accf9edbc14251e59a7eb85982f5495835cc4354c48e232&scene=0#rd
+
+
+5.使用到的相关类:
+VelocityTracker：滑动速度
+EdgeEffect:边缘效果
+OverScroller:滑动处理
+ViewConfiguration相关：
+   getScaledTouchSlop是一个距离，表示滑动的时候，手的移动要大于这个距离才开始移动控件。如果小于这个距离就不触发移动控件，如viewpager就是用这个距离来判断用户是否翻页
+   mMaximumVelocity = ViewConfiguration.get(context).getScaledMaximumFlingVelocity();
+   mMinimumVelocity = ViewConfiguration.get(context).getScaledMinimumFlingVelocity();
+SurfaceView
+GestureDetector
+ViewDragHelper
+startDragAndDrop  拖拽
+ItemTouchHelper 拖动帮族类
+PathMeasure path测量类
+SnapHelper  处理fling的回弹
+自定义的view:
+
+1. https://github.com/Carson-Ho/Kawaii_LoadingView  loadingdrawable  主要是计算。知识点没什么
+2.https://github.com/Mran/ViewPageTransformer  给viewpager设置不同的切换效果  这个我很感兴趣，一定要看下
+3.https://link.jianshu.com/?t=https://github.com/AxeChen/WaveProgress  圆形波浪view
+4.
+
+
+
+
+8. Paint
+setShadowLayer  设置阴影
+ViewCompat.setLayerType(shadowViewA, ViewCompat.LAYER_TYPE_SOFTWARE, null);
+
+
+
+
+
+知识点扩展:
+1. 解释 xfermode  离屏缓冲
+https://blog.csdn.net/iispring/article/details/50472485
+
+2.
+
+
+
+
+
+
+

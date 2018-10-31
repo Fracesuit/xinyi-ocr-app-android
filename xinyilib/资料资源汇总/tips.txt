@@ -1,0 +1,6 @@
+1.ImageView
+ getImageMatrix()  获取图片的矩阵  比如imageview的宽高 大于图片的宽高，就可以用这个获取真正图片的位置
+
+
+2. 子布局突破父布局的限制   clipChlidren  是否裁剪子类
+3 . clipToPadding  配合子类的marge值，设置padding效果  clipToPadding 是否可以在padding区域内绘制

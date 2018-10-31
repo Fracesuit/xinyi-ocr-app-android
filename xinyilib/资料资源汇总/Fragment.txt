@@ -1,0 +1,83 @@
+1. 通知新增地图--修复点位和电脑不一致
+
+2. 镜头图片更新问题
+
+3. 杆详情问题
+
+
+搞定了的:
+
+toolbar
+状态栏
+
+
+BaiduMap
+
+
+
+接下来的目标:
+搞定动画....
+
+git clone https://github.com/Fracesuit/project_home.git
+
+
+FragmentStatePagerAdapter  不会保存  直接调用 ondestory  彻底显示,但是会保存一些参数到	onSaveInstanceState中
+
+FragmentPagerAdapter  仅仅是调用OnDestoryView  ,
+
+
+
+5)detach()
+
+会将view从UI中移除,和remove()不同,此时fragment并没有与Activity断绝关系，所以生命周期的onDestroy方法和onDetach方法并没有被调用
+
+6)attach()
+
+重建view视图，附加到UI上并显示，如果调用完detach方法后再来调用该方法的话不会去走onAttach和onCreate方法。
+
+
+
+fragment真是博大精深
+https://www.zhihu.com/question/35956473  知乎 栈问题
+http://www.jianshu.com/p/5761ee2d3ea1
+http://blog.csdn.net/lmj623565791/article/details/37992017  这个很好,解决很多疑问
+http://www.jianshu.com/p/d9143a92ad94 --这个出了一个完整的解决方案
+
+http://www.jianshu.com/p/fe16553ca2ca 生命周期和回退栈的分析,这里要注意,replace并不会将原先的实例销毁,只有remove才会(未加入回退栈中),会是的原先的会调用onDestoryView,如果使用add,则不会,但是会保存一些参数到导致重叠.
+
+
+replace 相当于remove和add的合体,
+remove  会销毁实例,但是如果加入到回退栈中的话,那么当前实例是不会销毁的
+add     和原来的没关联,但是会重叠,通过show hide()这个一起配合来使用
+以上都要注意,因为生命周期的原因,所以都要判断是否实例化两次导致重叠,并且判断是否保存状态.因为有些情况有销毁视图.
+
+ fragmentTransaction.addToBackStack(null);//这个是将当前的Fragment加入栈中
+
+ 
+ 差不多搞明白了栈这个东西了,只是记住了而已啊.
+ 
+ -----------------------------------------------------处理防抖动
+ 
+死磕Fragment和动画.
+Toolbar和状态栏,以及Design新控件
+	
+
+
+
+1. 保存状态
+2. progressDialog  在github中搜索Dialog
+
+
+使用Fragment
+
+ 1. 在OnAttach中 获取activity对象
+ 
+ 
+ 2.生命周期,正常时和异常时,以及事务提交时
+ 
+ 
+ 3. 动画
+ 
+ 4. 滑动退出
+ 
+ 5. 和activity一样的属性,比如onactivityrsult,menu等等

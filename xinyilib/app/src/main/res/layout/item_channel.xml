@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_channel_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/comm_grey200"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:padding="10dp"
+        android:textColor="@color/comm_black"
+        android:textSize="12sp"
+        tools:text="频道"/>
+
+    <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/icon_right_up_delete"/>
+
+</RelativeLayout>

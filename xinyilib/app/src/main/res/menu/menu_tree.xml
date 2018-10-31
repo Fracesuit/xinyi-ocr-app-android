@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action"
+        android:icon="@mipmap/icon_dczj"
+        android:title="测试"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/action1"
+        android:icon="@mipmap/icon_cy"
+        android:title="测试1"
+        app:showAsAction="always"></item>
+</menu>

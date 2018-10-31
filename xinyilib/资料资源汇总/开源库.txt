@@ -1,0 +1,78 @@
+
+开源库:
+1.https://github.com/daimajia/AndroidImageSlider  轮播图 4416  轮播效果还不错,但是不能跟换加载库,不是很灵活
+https://github.com/youth5201314/banner 广告轮播图 3121  个人感觉这个更好,更加灵活
+
+2.https://github.com/traex/RippleEffect  点击出现波纹  4259
+https://github.com/balysv/material-ripple 点击出现波纹 1877
+
+3.https://github.com/CymChad/BaseRecyclerViewAdapterHelper  通用adapter 8469
+
+4.https://github.com/yqritc/RecyclerView-FlexibleDivider  分割线  1650   对纵向的布局还不错,对网格式布局就不行
+
+5.https://github.com/jonfinerty/Once  执行一次  1024
+
+6.https://github.com/GrenderG/Toasty  高级好看点的Toast  2859
+
+7.https://github.com/ybq/Android-SpinKit  各种各样的loading  3512
+
+8.https://github.com/ToxicBakery/ViewPagerTransforms viewpager的切换效果  1589
+https://github.com/alibaba/UltraViewPager viewpager的切换效果 2052
+https://github.com/xmuSistone/android-page-transition  1736
+https://github.com/Devlight/InfiniteCycleViewPager   二维控件无限滚动 3975
+https://github.com/florent37/MaterialViewPager  好看的viewpager 6276
+
+
+9.https://github.com/l123456789jy/Lazy 工具箱 util集合  1367
+
+
+10.https://github.com/ragunathjawahar/android-saripaar editText表单验证  2343  配合表格使用,这个很好啊
+
+11.https://github.com/rey5137/material  material控件集合  4989
+
+12.https://github.com/afollestad/material-dialogs   material-dialogs  10512
+
+13.https://github.com/pedant/sweet-alert-dialog   警告,错误等dialog  4782
+
+
+14. https://github.com/sephiroth74/Material-BottomNavigation  底部栏 无数提醒 941
+https://github.com/thelong1EU/SpaceTabLayout  选中的会有个圆形 1037
+https://github.com/armcha/Space-Navigation-View 和上面的差不多,并且有数字提醒  1355
+https://github.com/tyzlmjj/PagerBottomTabStrip  有数字提醒,比较灵活 1458
+https://github.com/roughike/BottomBar  6665
+https://github.com/Ashok-Varma/BottomNavigation  2207
+
+15.https://github.com/Tapadoo/Alerter 类似闹钟通知,从顶部弹出的toast 2953
+https://github.com/liuguangqiang/CookieBar  这个stat不多,但是和上面的效果类似,并且支持从底部出来  369
+
+https://github.com/Muddz/StyleableToast  好看的toast.  有更新动画  1177
+https://github.com/JohnPersano/SuperToasts  可以设置显示时间  2334
+https://github.com/HuanHaiLiuXin/SnackbarUtils  非常灵活的snackbar  ,出来的时间不多,所以star 就  392
+
+16.https://github.com/arimorty/floatingsearchview   搜索searchView  2194
+
+17.https://github.com/Manabu-GT/ExpandableTextView 扩展的Textview 2397
+
+
+项目:
+
+
+
+
+TIPS:小贴士:
+1. 可以从changeloglib这里学习侧边栏的问题
+
+
+
+
+
+
+
+
+特别:
+1. 快速开发框架
+https://github.com/youth5201314/XFrame 
+
+2. 信息集合
+
+3. 等待研究的

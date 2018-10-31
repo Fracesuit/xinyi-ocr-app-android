@@ -1,0 +1,31 @@
+<resources>
+   
+    <string name="title_translation">translationX/Y/Z()</string>
+    <string name="title_rotation">rotation/X/Y()</string>
+    <string name="title_alpha">alpha()</string>
+    <string name="title_multi_properties">ViewPropertyAnimator-多属性</string>
+    <string name="title_duration">setDuration()</string>
+    <string name="title_interpolator">setInterpolator()</string>
+    <string name="title_object_animator">ObjectAnimator</string>
+    <string name="duration">Duration</string>
+    <string name="ms_with_value">%dms</string>
+    <string name="interpolator">Interpolator</string>
+    <string name="animate">animate</string>
+    <string name="title_object_animator_multi_float">ObjectAnimator.ofMultiFloat()</string>
+    <string name="api_lower_than_21">API 21 及更高版本才支持这个，换个高版本的设备再试吧</string>
+    <string-array name="interpolators">
+        <item>AccelerateDecelerateInterpolator</item>
+        <item>LinearInterpolator</item>
+        <item>AccelerateInterpolator</item>
+        <item>DecelerateInterpolator</item>
+        <item>AnticipateInterpolator</item>
+        <item>OvershootInterpolator</item>
+        <item>AnticipateOvershootInterpolator</item>
+        <item>BounceInterpolator</item>
+        <item>CycleInterpolator</item>
+        <item>PathInterpolator</item>
+        <item>FastOutLinearInInterpolator</item>
+        <item>FastOutSlowInInterpolator</item>
+        <item>LinearOutSlowInInterpolator</item>
+    </string-array>
+</resources>

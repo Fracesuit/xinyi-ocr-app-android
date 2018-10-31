@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:context="com.xinyi_tech.freedom.facebookrebound.FacebookReboundActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="60dp"
+        android:text="text"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="60dp"
+        android:text="tex2t2"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/btn"
+        android:text="启动下"
+        android:background="@color/comm_orange"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+
+</LinearLayout>

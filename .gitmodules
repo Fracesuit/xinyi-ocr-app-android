@@ -1,0 +1,3 @@
+[submodule "xinyilib"]
+	path = xinyilib
+	url = https://github.com/Fracesuit/freedom.git

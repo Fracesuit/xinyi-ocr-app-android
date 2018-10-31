@@ -1,0 +1,145 @@
+裁剪
+https://github.com/steelkiwi/cropiwa  1518  可以裁剪不同的形状
+https://github.com/IsseiAoki/SimpleCropView   裁剪 旋转 1685
+https://github.com/jdamcd/android-crop  3693
+https://github.com/Yalantis/uCrop  5564
+https://github.com/lyft/scissors  1607  可以从网络的图片裁剪到本地
+
+
+压缩
+https://github.com/zetbaitsu/Compressor   从本地选择图片进行压缩  2476
+https://github.com/shaohui10086/AdvancedLuban 912
+https://github.com/Curzibn/Luban 能是最接近微信朋友圈的图片压缩算法  5239
+https://github.com/Sunzxyong/Tiny  1942
+
+分割
+https://github.com/yaa110/Piclice  将一张图片切割成多个部分 179 
+
+
+加载库
+1.Fresco
+https://github.com/stfalcon-studio/FrescoImageViewer  基于Fresco设计的全屏imageview  1204 
+
+2.Glide
+https://mrfu.me/2016/02/27/Glide_Getting_Started/	
+
+
+https://github.com/koush/ion 5367
+
+
+挺牛的一个自定义imageview  
+https://github.com/panpf/sketch  685
+
+
+放大
+https://github.com/imablanco/Zoomy  	点击可直接放大  656
+https://github.com/chrisbanes/PhotoView  手势放大  10829
+
+长图
+https://github.com/LuckyJayce/LargeImage  1126
+
+
+矢量图
+https://github.com/harjot-oberai/VectorMaster
+
+
+选择库
+https://github.com/Bilibili/boxing/blob/master/README_CN.md   1872
+https://github.com/andremion/Louvre  出来的比较晚  435
+https://github.com/yanzhenjie/Album/blob/master/README-CN.md  感觉这个挺好的  ,比较灵活985
+https://github.com/donglua/PhotoPicker  从底部选择相册 坊微信 2033
+https://github.com/lovetuzitong/MultiImageSelector  可以设置是否显示camera 2432
+https://github.com/ParkSangGwon/TedBottomPicker 635  从底部选择相册
+https://github.com/zhihu/Matisse 4389 感觉很不错
+https://github.com/crazycodeboy/TakePhoto 3228
+https://github.com/LuckSiege/PictureSelector  1852
+https://github.com/pengjianbo/GalleryFinal  2847
+
+
+https://github.com/TangXiaoLv/TelegramGallery/blob/master/README_CN.md   快速，高效，低耗相册选择器，抽取自Telegram，支持单选，多选，预览，缩放，滑动取消预览，QQ选择特性 1067
+
+
+图片进度
+https://github.com/florent37/MaterialImageLoading   图片加载过程有一个动画效果 378
+https://github.com/mrwonderman/android-square-progressbar  外面加一个边框作为图片加载进度提示 998
+https://github.com/Piasy/BigImageViewer 1716
+
+图片合成
+https://github.com/mrwonderman/driveimageview  加文字  251
+https://github.com/sharish/BitmapMerger  加图片 412
+
+
+编辑
+https://github.com/dawsonice/ProMosaic 处理图片  在图片上画东西,模糊等等操作 335
+https://github.com/siwangqishiq/ImageEditor-Android  734  支持磨皮美白 自定义贴图 图片滤镜 图片旋转 图片剪裁 文字贴图操作
+https://github.com/jarlen/PhotoEditDemo  838
+
+
+
+图片特效
+1.https://github.com/yingLanNull/ShadowImageView   可以根据图片内容变阴影颜色，更加细腻的阴影效果   1213
+
+2.https://github.com/gogopop/BlurKit-Android  高斯模糊   2048
+https://github.com/500px/500px-android-blur 2026
+https://github.com/PomepuyN/BlurEffectForAndroidDesign 1932
+https://github.com/wasabeef/Blurry 2727
+https://github.com/Dimezis/BlurView 1692
+
+3.https://github.com/zhangyuChen1991/Roll3DImageView  3D旋转  2d平移
+
+
+4.https://github.com/gjiazhe/ScrollParallaxImageView 视差效果,就是有些放大,有些缩小,适用于很多的imageview的时候 421	
+https://github.com/flavioarfaria/KenBurnsView  1816
+
+5.https://github.com/SwiftyWang/android-drag-square 拖拽排序放大 拼图	222
+https://github.com/xmuSistone/android-drag-square  902
+https://github.com/wuapnjie/PuzzleView 423
+
+6.https://github.com/stfalcon-studio/MultiImageView 一个imageview可以放很多图片  236
+
+7.https://github.com/CoXier/LowPoly 将图片变成一块一块 Low Poly Photo    876
+
+8.https://github.com/david-gpu/srez 马赛克   4420
+
+9.https://github.com/pedrovgs/Nox  图片墙 280
+
+10.https://github.com/Quatja/Vorolay 万花筒  300
+
+11.https://github.com/saiwu-bigkoo/Android-PictureTagView 在图片上的任意位置打tag 524
+https://github.com/Frank-Zhu/TriangleRectangleLabelView  451
+
+
+12.https://github.com/nimengbo/StickerView 图片合成 ,天假tag或者小贴纸 664
+https://github.com/wuapnjie/StickerView 768
+https://github.com/yesidlazaro/BadgedImageview 设置微章 431	
+
+13.
+
+14.https://github.com/Q42/AndroidScrollingImageView 可以滑动,自动滚动的Imageview 1244
+https://github.com/AlbertGrobas/MovingImageView  730
+
+15.https://github.com/AlbertGrobas/PolygonImageView 任意形状的imageview 479
+https://github.com/vinc3m1/RoundedImageView 4089
+https://github.com/siyamed/android-shape-imageview 1942
+
+16.https://github.com/amirarcane/recent-images 展示最新的图片 155
+
+17.https://github.com/laobie/NineGridImageView 9宫格 929
+
+18.https://github.com/HoraApps/LeafPic 画廊	  1702
+
+19.https://github.com/lingochamp/QiniuImageLoader 基于七牛api封装的加载 421
+
+
+Imageview本身的知识点:
+
+1. ImageView.ScaleType的讲解
+http://m.blog.csdn.net/larryl2003/article/details/6919513
+http://m.blog.csdn.net/u012702547/article/details/50586946
+
+
+2.图片格式介绍及图片压缩处理,减小apk的体积
+http://hlong.xyz/2016/07/11/Google%20IO%202016%20%E7%AC%94%E8%AE%B0%E4%B9%8B%E5%9B%BE%E5%83%8F%E5%8E%8B%E7%BC%A9/
+
+
+

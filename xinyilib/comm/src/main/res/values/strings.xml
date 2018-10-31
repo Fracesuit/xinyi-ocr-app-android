@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="comm_app_name">Comm</string>
+
+    <string name="comm_loading_wait_msg" tools:ignore="PrivateResource">请稍后…</string>
+
+
+    <!--网络-->
+    <string name="comm_net_error_service_busy">服务器正忙,请稍后再试</string>
+    <string name="comm_net_error_connent">请检查网络是否畅通</string>
+    <string name="comm_net_error_timeout">连接超时,请检查网络是否畅通</string>
+    <string name="comm_net_error_login">登录失效，请重新登录再试</string>
+    <string name="comm_net_error_nourl">链接不存在</string>
+    <string name="comm_net_error_http">网络异常,异常状态码</string>
+
+    <string name="comm_search_hint">Search</string>
+
+</resources>

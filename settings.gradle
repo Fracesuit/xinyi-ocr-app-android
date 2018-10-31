@@ -1,0 +1,9 @@
+include ':app',
+        ':comm',
+        ':core',
+        ':pick_library1', ':ocr:ocridcardlibrary'
+
+project(':comm').projectDir = new File(settingsDir,'/xinyilib/comm')
+project(':core').projectDir = new File(settingsDir,'/xinyilib/core')
+project(':pick_library1').projectDir = new File(settingsDir,'/xinyilib/pick_library')
+

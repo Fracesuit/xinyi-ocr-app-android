@@ -1,0 +1,20 @@
+1.差异化构建，使得以来lib不仅仅只是以来release
+   第一步： android {
+         ...
+        publishNonDefault true
+    }
+
+    第二步：
+    在src下新建debug和release包。
+    第三部：
+    String type
+    buildTypes{
+        release{
+        type="release"
+        }
+          debug{
+                type="debug"
+           }
+    }
+    compile project (path:lib,configuration:type)
+

@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            Properties properties = new Properties()
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+            //读取字段
+            def key_keyAlias = properties.getProperty( 'keyAlias' )
+            def key_keyPassword = properties.getProperty( 'keyPassword' ) ;
+            def key_storePassword = properties.getProperty( 'storePassword' ) ;
+
+            keyAlias key_keyAlias
+            keyPassword key_keyPassword
+            storeFile file("..\\exfile\\xinyinewtech.jks")
+            storePassword key_storePassword
+
+        }
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "cn.net.xinyi.xmjt"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+        // manifestPlaceholders = [UMENG_KEY: rootProject.ext.PRODUCT_UMENG_KEY]
+        // manifestPlaceholders = [BAIDU_KEY: rootProject.ext.DEV_BAIDU_KEY]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "HOST", rootProject.ext.PRODUCT_HOST)
+            buildConfigField("Integer", "PORT", rootProject.ext.PRODUCT_PORT)
+            buildConfigField("boolean", "ISDEBUG", "false")
+            ndk {
+                // 设置支持的 SO 库构架XI
+                abiFilters 'armeabi'
+                // ,'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            }
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "HOST", rootProject.ext.DEV_HOST)
+            buildConfigField("Integer", "PORT", rootProject.ext.DEV_PORT)
+            buildConfigField("boolean", "ISDEBUG", "true")
+            ndk {
+                // 设置支持的 SO 库构架XI
+                abiFilters 'armeabi'
+                //, 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            }
+            signingConfig signingConfigs.release
+        }
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "jwt_" + defaultConfig.versionName + new Date().format("-yyyyMMdd") + ".apk"
+            }
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'InvalidPackage'
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/layouts'
+            ]
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':comm')
+}
