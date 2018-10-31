@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">core</string>
-    <!--权限-->
-    <string name="comm_permission_confirm">确认</string>
-    <string name="comm_permission_cancel">取消</string>
-    <string name="comm_permission_title">权限设置</string>
-    <string name="comm_permission_message_permission_failed">我们需要的一些权限被您拒绝或者系统发生错误申请失败，请您到设置页面手动授权，否则功能无法正常使用！</string>
-
-</resources>

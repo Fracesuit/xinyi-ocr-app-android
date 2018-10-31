@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityUtils.startActivity(this, IdcardOrcActivity.class);
                 break;
             case R.id.tv_cpsb:
+            //    ActivityUtils.startActivity(this, PlateOcrActivity.class);
                 break;
         }
     }

@@ -46,7 +46,7 @@ allprojects {
         versionCode = 1
         versionName = "v1.00" + new Date().format(".yyyyMMdd")
         //android
-        supportLibraryVersion = '27.1.0'
+        supportLibraryVersion = '27.1.1'
 
         comm_version = "5.1"
         userOrg = 'freedom'

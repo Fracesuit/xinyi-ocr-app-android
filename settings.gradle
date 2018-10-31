@@ -1,9 +1,9 @@
 include ':app',
         ':comm',
         ':core',
-        ':pick_library1', ':ocr:ocridcardlibrary'
+        ':pick_library1', ':ocr:ocridcardlibrary', ':ocr:ocrplateidlibrary'
 
-project(':comm').projectDir = new File(settingsDir,'/xinyilib/comm')
-project(':core').projectDir = new File(settingsDir,'/xinyilib/core')
-project(':pick_library1').projectDir = new File(settingsDir,'/xinyilib/pick_library')
+project(':comm').projectDir = new File(settingsDir,'/conmonlib/comm')
+project(':core').projectDir = new File(settingsDir,'/conmonlib/core')
+project(':pick_library1').projectDir = new File(settingsDir,'/conmonlib/pick_library')
 
