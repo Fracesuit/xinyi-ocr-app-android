@@ -7,9 +7,9 @@ android {
             properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
             //读取字段
-            def key_keyAlias = properties.getProperty( 'keyAlias' )
-            def key_keyPassword = properties.getProperty( 'keyPassword' ) ;
-            def key_storePassword = properties.getProperty( 'storePassword' ) ;
+            def key_keyAlias = properties.getProperty('keyAlias')
+            def key_keyPassword = properties.getProperty('keyPassword');
+            def key_storePassword = properties.getProperty('storePassword');
 
             keyAlias key_keyAlias
             keyPassword key_keyPassword
@@ -26,7 +26,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
-       // multiDexEnabled true
+        multiDexEnabled true
         // manifestPlaceholders = [UMENG_KEY: rootProject.ext.PRODUCT_UMENG_KEY]
         // manifestPlaceholders = [BAIDU_KEY: rootProject.ext.DEV_BAIDU_KEY]
     }
@@ -85,5 +85,5 @@ dependencies {
     implementation project(':comm')
     implementation project(':ocr:ocridcardlibrary')
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-    //implementation project(':ocr:ocrplateidlibrary')
+    implementation project(':ocr:ocrplateidlibrary')
 }

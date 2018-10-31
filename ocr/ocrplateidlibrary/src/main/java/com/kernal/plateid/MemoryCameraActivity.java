@@ -1158,7 +1158,7 @@ public class MemoryCameraActivity extends Activity implements
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			Intent intent  = new Intent("kernal.plateid.PlateOcrActivity");
+			Intent intent = new Intent(this,PlateOcrActivity.class);
 			startActivity(intent);
 			closeCamera();
 			finish();

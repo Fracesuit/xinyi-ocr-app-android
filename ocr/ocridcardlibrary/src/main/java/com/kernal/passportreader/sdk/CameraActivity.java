@@ -1110,7 +1110,7 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback,
 				resetIsTouchedhandler.removeCallbacks(touchTimeOut);
 				resetIsTouchedhandler = null;
 			}
-			Intent intent = new Intent("kernal.idcard.IdcardOrcActivity");
+			Intent intent = new Intent(this,IdcardOrcActivity.class);
 			//  to set up animation switch entering from right and exit from left
 			// CameraActivity.this.finish();
 			startActivity(intent);
@@ -1579,7 +1579,7 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback,
 				resetIsTouchedhandler = null;
 			}
 
-			Intent intent = new Intent("kernal.idcard.IdcardOrcActivity");
+			Intent intent = new Intent(this,IdcardOrcActivity.class);
 			// to set up animation switch entering from right and exit from left
 			// CameraActivity.this.finish();
 			startActivity(intent);

@@ -1,9 +1,12 @@
 include ':app',
         ':comm',
         ':core',
-        ':pick_library1', ':ocr:ocridcardlibrary', ':ocr:ocrplateidlibrary'
+        ':pick_library1',
+        ':ocr:ocridcardlibrary',
+        ':ocr:ocrlib',
+        ':ocr:ocrplateidlibrary'
 
-project(':comm').projectDir = new File(settingsDir,'/conmonlib/comm')
-project(':core').projectDir = new File(settingsDir,'/conmonlib/core')
-project(':pick_library1').projectDir = new File(settingsDir,'/conmonlib/pick_library')
+project(':comm').projectDir = new File(settingsDir, '/conmonlib/comm')
+project(':core').projectDir = new File(settingsDir, '/conmonlib/core')
+project(':pick_library1').projectDir = new File(settingsDir, '/conmonlib/pick_library')
 

@@ -51,8 +51,7 @@ public class MemoryResultActivity extends Activity{
  * 
 * @Title: findView 
 * @Description: TODO(这里用一句话描述这个方法的作用) 
-* @param     设定文件 
-* @return void    返回类型 
+* @return void    返回类型
 * @throws
  */
 	private void findView() {
@@ -168,7 +167,7 @@ public class MemoryResultActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent intent  = new Intent("kernal.plateid.PlateOcrActivity");
+				Intent intent  = new Intent(MemoryResultActivity.this,PlateOcrActivity.class);
 				startActivity(intent);
 				finish();
 			}

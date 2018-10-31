@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+
 import com.blankj.utilcode.util.ActivityUtils;
 import com.kernal.passportreader.sdk.IdcardOrcActivity;
+import com.kernal.plateid.PlateOcrActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityUtils.startActivity(this, IdcardOrcActivity.class);
                 break;
             case R.id.tv_cpsb:
-            //    ActivityUtils.startActivity(this, PlateOcrActivity.class);
+                ActivityUtils.startActivity(this, PlateOcrActivity.class);
                 break;
         }
     }
