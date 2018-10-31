@@ -1,4 +1,4 @@
-package com.example.zhirenzhang.lg_new_jwt_app_android;
+package com.camera.picturelib;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.zhirenzhang.lg_new_jwt_app_android", appContext.getPackageName());
+        assertEquals("com.example.picturelib.test", appContext.getPackageName());
     }
 }

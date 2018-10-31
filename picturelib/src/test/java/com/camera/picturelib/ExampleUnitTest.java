@@ -1,4 +1,4 @@
-package com.example.zhirenzhang.lg_new_jwt_app_android;
+package com.camera.picturelib;
 
 import org.junit.Test;
 

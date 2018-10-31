@@ -86,4 +86,5 @@ dependencies {
     implementation project(':ocr:ocridcardlibrary')
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
     implementation project(':ocr:ocrplateidlibrary')
+    implementation project(':picturelib')
 }

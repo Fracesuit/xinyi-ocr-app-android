@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.camera.picturelib.CamersActivity">
+
+    <com.camera.picturelib.LiveCameraView
+        android:id="@+id/live_camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.allen.library.SuperButton
+        android:id="@+id/sbtn_takephoto"
+        android:layout_width="64dp"
+        app:sShapeType="oval"
+        app:sStrokeWidth="8dp"
+        app:sStrokeColor="#eeeeef"
+        app:sSolidColor="@color/comm_white"
+        app:sSelectorPressedColor="@color/comm_grey300"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="64dp" />
+
+</RelativeLayout>

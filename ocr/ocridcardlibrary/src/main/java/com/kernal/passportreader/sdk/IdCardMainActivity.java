@@ -226,7 +226,7 @@ public class IdCardMainActivity extends Activity implements
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see android.view.View.OnClickListener#onClick(android.view.View)
+	 * @see android.view.View.OnClickListener#on欧尼Click(android.view.View)
 	 */
 	@Override
 	public void onClick(View v) {

@@ -6,6 +6,7 @@ import android.view.View;
 
 
 import com.blankj.utilcode.util.ActivityUtils;
+import com.camera.picturelib.CamersActivity;
 import com.kernal.passportreader.sdk.IdcardOrcActivity;
 import com.kernal.plateid.PlateOcrActivity;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         //ArrowView arrowView=new ArrowView()
     }
 
-    @OnClick({R.id.tv_zjsb, R.id.tv_cpsb})
+    @OnClick({R.id.tv_zjsb, R.id.tv_cpsb,R.id.tv_camera})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_zjsb:
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.tv_cpsb:
                 ActivityUtils.startActivity(this, PlateOcrActivity.class);
+                break;
+            case R.id.tv_camera:
+                ActivityUtils.startActivity(this, CamersActivity.class);
                 break;
         }
     }

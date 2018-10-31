@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':picturelib',
         ':comm',
         ':core',
         ':pick_library1',
