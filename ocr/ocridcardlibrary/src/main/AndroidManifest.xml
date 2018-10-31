@@ -21,12 +21,11 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="23" />
     <application
-        android:allowBackup="false"
          >
         <meta-data android:name="android.max_aspect"
             android:value="2.1" />
         <activity
-            android:name="com.kernal.passportreader.sdk.MainActivity"
+            android:name="com.kernal.passportreader.sdk.IdcardOrcActivity"
             android:exported="false"
             android:screenOrientation="portrait" >
             <intent-filter>

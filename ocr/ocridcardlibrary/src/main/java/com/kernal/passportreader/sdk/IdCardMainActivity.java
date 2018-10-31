@@ -154,7 +154,7 @@ public class IdCardMainActivity extends Activity implements
 		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 		srcWidth = displayMetrics.widthPixels;
 		srcHeight = displayMetrics.heightPixels;
-		setContentView(getResources().getIdentifier("activity_main", "layout",
+		setContentView(getResources().getIdentifier("activity_idcard_ocr", "layout",
 				getPackageName()));
 		findView();
 		// the came interface being released

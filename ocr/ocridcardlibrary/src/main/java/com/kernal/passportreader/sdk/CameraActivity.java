@@ -385,7 +385,7 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback,
 	public static boolean isTakePicRecogFrame = false;
 	private String picPathString1 = "";
 	private int detectLightspot = 0;
-	private int VehicleLicenseflag = 0;//  frow which interface to skip to camera interface. “0” means from the MainActivity interface, “1” means from VehicleLicenseMainActivity interface, “2” means from identity card interface.
+	private int VehicleLicenseflag = 0;//  frow which interface to skip to camera interface. “0” means from the IdcardOrcActivity interface, “1” means from VehicleLicenseMainActivity interface, “2” means from identity card interface.
 	private int nCropType = 0;
 	private ResultMessage resultMessage;
 	private TextView tv_reject_recog;
@@ -1110,7 +1110,7 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback,
 				resetIsTouchedhandler.removeCallbacks(touchTimeOut);
 				resetIsTouchedhandler = null;
 			}
-			Intent intent = new Intent("kernal.idcard.MainActivity");
+			Intent intent = new Intent("kernal.idcard.IdcardOrcActivity");
 			//  to set up animation switch entering from right and exit from left
 			// CameraActivity.this.finish();
 			startActivity(intent);
@@ -1579,7 +1579,7 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback,
 				resetIsTouchedhandler = null;
 			}
 
-			Intent intent = new Intent("kernal.idcard.MainActivity");
+			Intent intent = new Intent("kernal.idcard.IdcardOrcActivity");
 			// to set up animation switch entering from right and exit from left
 			// CameraActivity.this.finish();
 			startActivity(intent);

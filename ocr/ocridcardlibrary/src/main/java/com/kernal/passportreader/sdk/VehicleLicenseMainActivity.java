@@ -135,7 +135,7 @@ public class VehicleLicenseMainActivity extends Activity implements
 		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 		srcWidth = displayMetrics.widthPixels;
 		srcHeight = displayMetrics.heightPixels;
-		setContentView(getResources().getIdentifier("activity_main", "layout",
+		setContentView(getResources().getIdentifier("activity_idcard_ocr", "layout",
 				getPackageName()));
 		findView();
 		// the came interface being released
@@ -452,7 +452,7 @@ public class VehicleLicenseMainActivity extends Activity implements
 									RecogService.class);
 							bindService(recogIntent, recogConn, Service.BIND_AUTO_CREATE);
 						}}.start();
-					//ActivityRecogUtils.getRecogResult(MainActivity.this, selectPath, RecogService.nMainID, true);
+					//ActivityRecogUtils.getRecogResult(IdcardOrcActivity.this, selectPath, RecogService.nMainID, true);
 				}
 			} else {
 				Uri uri = data.getData();
@@ -467,7 +467,7 @@ public class VehicleLicenseMainActivity extends Activity implements
 								RecogService.class);
 						bindService(recogIntent, recogConn, Service.BIND_AUTO_CREATE);
 					}}.start();
-				//ActivityRecogUtils.getRecogResult(MainActivity.this, selectPath, RecogService.nMainID, true);
+				//ActivityRecogUtils.getRecogResult(IdcardOrcActivity.this, selectPath, RecogService.nMainID, true);
 
 			}
 

@@ -9,14 +9,12 @@ import com.kernal.passport.sdk.utils.AppManager;
 import com.kernal.passport.sdk.utils.HttpUploadDialog;
 import com.kernal.passport.sdk.utils.NetworkProber;
 import com.kernal.passport.sdk.utils.SharedPreferencesHelper;
-import com.kernal.passportreader.sdk.R;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.storage.StorageVolume;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,7 +26,6 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -187,7 +184,7 @@ public class ShowResultActivity extends Activity implements OnClickListener {
 
 			if (importRecog) {
 				if (VehicleLicenseflag == 0) {
-					intent = new Intent(ShowResultActivity.this, MainActivity.class);
+					intent = new Intent(ShowResultActivity.this, IdcardOrcActivity.class);
 				} else if (VehicleLicenseflag == 1) {
 					intent = new Intent(ShowResultActivity.this,
 							VehicleLicenseMainActivity.class);
@@ -239,7 +236,7 @@ public class ShowResultActivity extends Activity implements OnClickListener {
 				}
 			}
 			if (VehicleLicenseflag == 0) {
-				intent = new Intent(ShowResultActivity.this, MainActivity.class);
+				intent = new Intent(ShowResultActivity.this, IdcardOrcActivity.class);
 				ShowResultActivity.this.finish();
 				startActivity(intent);
 			} else if (VehicleLicenseflag == 1) {
@@ -281,7 +278,7 @@ public class ShowResultActivity extends Activity implements OnClickListener {
 			Intent intent = null;
 			if (importRecog) {
 				if (VehicleLicenseflag == 0) {
-					intent = new Intent(ShowResultActivity.this, MainActivity.class);
+					intent = new Intent(ShowResultActivity.this, IdcardOrcActivity.class);
 				} else if (VehicleLicenseflag == 1) {
 					intent = new Intent(ShowResultActivity.this,
 							VehicleLicenseMainActivity.class);

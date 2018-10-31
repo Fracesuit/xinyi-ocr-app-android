@@ -4,12 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-import com.kernal.passportreader.sdk.MainActivity;
+
 import com.kernal.passportreader.sdk.R;
 import com.kernal.passportreader.sdk.ShowResultActivity;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+
 import kernal.idcard.android.RecogService;
 import kernal.idcard.android.ResultMessage;
 
