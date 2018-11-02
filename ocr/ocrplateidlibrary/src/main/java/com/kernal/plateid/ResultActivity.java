@@ -159,7 +159,8 @@ public class ResultActivity extends Activity {
 		setContentView(R.layout.result);
 		Intent intent = getIntent();
 		RecogService.initializeType = false;
-		recogPicPath = intent.getStringExtra("recogImagePath");
+		//recogPicPath ="/storage/emulated/0/Android/data/cn.net.xinyi.xmjt/cache/photo/20181101171807.jpg";//intent.getStringExtra("recogImagePath");
+		recogPicPath =intent.getStringExtra("recogImagePath");
 		resultImageView = (ImageView) findViewById(R.id.lastfinallyshowimage);
 		resultEditText = (EditText) findViewById(R.id.edit_file);
 		DisplayMetrics dm = new DisplayMetrics();
@@ -203,7 +204,7 @@ public class ResultActivity extends Activity {
 		} else {
 			Toast.makeText(ResultActivity.this, "读取图片错误，图片超过1920*1080分辨率",  
 					Toast.LENGTH_LONG).show();
-			Intent intentPIC  = new Intent("kernal.plateid.PlateOcrActivity");
+			Intent intentPIC  = new Intent(this,PlateOcrActivity.class);
 			startActivity(intentPIC);
 			finish();
 		}

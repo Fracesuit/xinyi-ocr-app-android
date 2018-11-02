@@ -39,4 +39,9 @@
         android:padding="5dp"
         android:text="自定义相机"
         android:textSize="16sp" />
+
+    <com.xinyi_tech.comm.widget.picker.SuperImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
 </LinearLayout>

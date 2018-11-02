@@ -1,13 +1,21 @@
 package com.camera.picturelib;
 
 import android.content.Context;
+import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import com.blankj.utilcode.util.ScreenUtils;
+import com.camera.configuration.Configuration;
+import com.camera.internal.utils.CameraHelper;
+import com.camera.internal.utils.Size;
+
 import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by zhiren.zhang on 2018/10/31.
@@ -17,6 +25,7 @@ public class LiveCameraView extends SurfaceView implements SurfaceHolder.Callbac
     private final static String TAG = LiveCameraView.class.getSimpleName();
     private Camera mCamera;
     private SurfaceHolder mSurfaceHolder;
+
     public LiveCameraView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
@@ -38,20 +47,41 @@ public class LiveCameraView extends SurfaceView implements SurfaceHolder.Callbac
         if (mSurfaceHolder.getSurface() == null) {
             return;
         }
-        Cameras.followScreenOrientation(getContext(), mCamera);
-        Log.d(TAG, "Restart preview display[SURFACE-CHANGED]");
+        setCameraParams(width, height);
+
         stopPreviewDisplay();
         startPreviewDisplay(mSurfaceHolder);
     }
 
-    public void setCamera(Camera camera) {
-        mCamera = camera;
-        final Camera.Parameters params = mCamera.getParameters();
-        params.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
-        params.setSceneMode(Camera.Parameters.SCENE_MODE_AUTO);
+    private void setCameraParams(int width, int height) {
+        Cameras.followScreenOrientation(mCamera);//设置相机角度，不然预览的图像和真实的图像会成90度
+
+        Camera.Parameters parameters = mCamera.getParameters();
+
+        parameters.setSceneMode(Camera.Parameters.SCENE_MODE_BARCODE);
+
+        parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+        parameters.setPictureFormat(PixelFormat.JPEG);
+        parameters.setExposureCompensation(0);
+
+        final List<Size> previewSizes = Size.fromList(parameters.getSupportedPreviewSizes());
+        final List<Size> pictureSizes = Size.fromList(parameters.getSupportedPictureSizes());
+
+        Size optimalPreviewSize = Cameras.getOptimalPreviewSize(previewSizes, width, height);
+        parameters.setPreviewSize(optimalPreviewSize.getWidth(), optimalPreviewSize.getHeight());
+
+        Size optimalPictureSize = Cameras.getOptimalPictureSize(pictureSizes, width, height);
+        parameters.setPictureSize(optimalPictureSize.getWidth(), optimalPictureSize.getHeight());
+
+        mCamera.setParameters(parameters);
     }
 
-    public Camera getmCamera() {
+
+    public void setCamera(Camera camera) {
+        mCamera = camera;
+    }
+
+    public Camera getCamera() {
         return mCamera;
     }
 
@@ -84,7 +114,6 @@ public class LiveCameraView extends SurfaceView implements SurfaceHolder.Callbac
     public void surfaceDestroyed(SurfaceHolder holder) {
         Log.d(TAG, "Stop preview display[SURFACE-DESTROYED]");
         stopPreviewDisplay();
-        mCamera.release();
     }
 }
 
