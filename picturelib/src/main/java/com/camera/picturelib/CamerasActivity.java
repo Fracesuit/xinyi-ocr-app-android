@@ -45,7 +45,7 @@ public class CamerasActivity extends AppCompatActivity {
     private File outputPath;
 
     private Camera camera;
-    OcrTask2 ocrTask;
+    OcrTask ocrTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class CamerasActivity extends AppCompatActivity {
         camera = openCamera();
         if (camera == null) return;
 
-        ocrTask = new OcrTask2(this, new CommCallBackListener<String>() {
+        ocrTask = new OcrTask(this, new CommCallBackListener<String>() {
             @Override
             public void callBack(String s) {
                 XinYiLog.e("ds" + s);
@@ -119,7 +119,7 @@ public class CamerasActivity extends AppCompatActivity {
 
         outputPath = new File(SDCardUtils2.getExternalPublic(Environment.DIRECTORY_PICTURES), TimeUtils.getNowMills() + ".jpg");
         //保存图片
-        // FileIOUtils.writeFileFromBytesByStream(outputPath, bytes, true);
+         FileIOUtils.writeFileFromBytesByStream(outputPath, bytes, true);
 
 
      /*   try {
@@ -129,12 +129,12 @@ public class CamerasActivity extends AppCompatActivity {
         } catch (Throwable error) {
             Log.e("CamerasActivity", "Can't save exif info: " + error.getMessage());
         }*/
-        int ocrType = getIntent().getIntExtra("ocrType", 2);//证件识别类型  默认识别身份证
+      /*  int ocrType = getIntent().getIntExtra("ocrType", 2);//证件识别类型  默认识别身份证
         Bitmap bitmap = ImageUtils.getBitmap(bytes, 0);
         Bitmap rotate = ImageUtils.rotate(bitmap, 0, bitmap.getWidth() / 2, bitmap.getHeight() / 2, true);//摄像头转多少度，这个图片就要转多少度
 
         ImageUtils.save(rotate, outputPath, Bitmap.CompressFormat.JPEG);
-        rotate.recycle();
+        rotate.recycle();*/
         ocrTask.execute(outputPath.getPath());
         //继续拍照或者拍照之后返回或者跳转到预览页面
         //liveCameraView.getCamera().startPreview();

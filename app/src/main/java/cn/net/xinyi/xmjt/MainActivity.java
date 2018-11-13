@@ -11,6 +11,7 @@ import com.camera.picturelib.OcrUtils;
 import com.kernal.passport.sdk.utils.Devcode;
 import com.kernal.passport.sdk.utils.SharedPreferencesHelper;
 import com.kernal.passportreader.sdk.CameraActivity;
+import com.kernal.passportreader.sdk.IdcardOrcActivity;
 import com.kernal.plateid.PlateOcrActivity;
 import com.xinyi_tech.comm.advanced.ActResultRequest;
 import com.xinyi_tech.comm.widget.picker.SuperImageView;
@@ -37,26 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_zjsb:
-                /**
-                 * intent = new Intent(IdCardMainActivity.this,
-                 CameraActivity.class);
-                 intent.putExtra("nMainId", SharedPreferencesHelper.getInt(
-                 getApplicationContext(), "nMainId", 2));
-                 intent.putExtra("devcode", devcode);
-                 intent.putExtra("flag", 0);
-                 intent.putExtra("nCropType", 0);
-                 intent.putExtra("VehicleLicenseflag", 2);
-                 */
-                Intent intent = new Intent(this,
-                        CameraActivity.class);
-                intent.putExtra("nMainId", SharedPreferencesHelper.getInt(
-                        getApplicationContext(), "nMainId", 2));//
-                intent.putExtra("devcode", Devcode.devcode);
-                intent.putExtra("flag", 0);
-                intent.putExtra("nCropType", 0);
-                intent.putExtra("VehicleLicenseflag", 2);
-                ActivityUtils.startActivity(intent);
-                //ActivityUtils.startActivity(this, IdcardOrcActivity.class);
+                ActivityUtils.startActivity(this, IdcardOrcActivity.class);
                 break;
             case R.id.tv_cpsb:
                 ActivityUtils.startActivity(this, PlateOcrActivity.class);
