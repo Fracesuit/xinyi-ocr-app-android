@@ -1,10 +1,5 @@
 package com.kernal.passportreader.sdk;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -27,26 +22,18 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.IBinder;
-import android.os.Vibrator;
-import android.provider.MediaStore;
-import android.provider.Settings;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Service;
-import android.app.AlertDialog.Builder;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.database.Cursor;
-import android.hardware.Camera;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
@@ -55,7 +42,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class VehicleLicenseMainActivity extends Activity implements

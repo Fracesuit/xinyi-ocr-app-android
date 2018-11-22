@@ -1,41 +1,22 @@
 package com.camera.picturelib;
 
-import android.app.Activity;
-import android.app.Service;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.graphics.Bitmap;
 import android.hardware.Camera;
-import android.media.ExifInterface;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Surface;
 import android.view.View;
-import android.view.Window;
 
 import com.blankj.utilcode.util.FileIOUtils;
-import com.blankj.utilcode.util.ImageUtils;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.blankj.utilcode.util.TimeUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.camera.internal.utils.SDCardUtils2;
-import com.kernal.passport.sdk.utils.Devcode;
 import com.xinyi_tech.comm.CommCallBackListener;
 import com.xinyi_tech.comm.log.XinYiLog;
-import com.xinyi_tech.comm.permission.DefaultRequestPermissionsListener;
-import com.xinyi_tech.comm.permission.PermissionsHelp;
-import com.xinyi_tech.comm.util.FileUtils2;
 
 import java.io.File;
-import java.util.Arrays;
-
-import kernal.idcard.android.RecogParameterMessage;
-import kernal.idcard.android.RecogService;
-import kernal.idcard.android.ResultMessage;
 
 public class CamerasActivity extends AppCompatActivity {
 

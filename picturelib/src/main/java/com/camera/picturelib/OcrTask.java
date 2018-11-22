@@ -1,6 +1,5 @@
 package com.camera.picturelib;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.app.Service;
 import android.content.ComponentName;
@@ -10,12 +9,8 @@ import android.os.AsyncTask;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 
-import com.afollestad.materialdialogs.GravityEnum;
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.kernal.passport.sdk.utils.Devcode;
 import com.xinyi_tech.comm.CommCallBackListener;
-import com.xinyi_tech.comm.help.DialogHelp;
-import com.xinyi_tech.comm.log.XinYiLog;
 
 import java.util.Arrays;
 

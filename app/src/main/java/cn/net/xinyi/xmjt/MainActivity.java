@@ -8,9 +8,6 @@ import android.view.View;
 import com.blankj.utilcode.util.ActivityUtils;
 import com.camera.picturelib.CameraInfo;
 import com.camera.picturelib.OcrUtils;
-import com.kernal.passport.sdk.utils.Devcode;
-import com.kernal.passport.sdk.utils.SharedPreferencesHelper;
-import com.kernal.passportreader.sdk.CameraActivity;
 import com.kernal.passportreader.sdk.IdcardOrcActivity;
 import com.kernal.plateid.PlateOcrActivity;
 import com.xinyi_tech.comm.advanced.ActResultRequest;
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityUtils.startActivity(this, IdcardOrcActivity.class);
                 break;
             case R.id.tv_cpsb:
-                ActivityUtils.startActivity(this, PlateOcrActivity.class);
+               ActivityUtils.startActivity(this, PlateOcrActivity.class);
                 break;
             case R.id.tv_camera:
                 // ActivityUtils.startActivity(this, CamerasActivity.class);

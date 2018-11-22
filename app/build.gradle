@@ -21,7 +21,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "cn.net.xinyi.xmjt"
+        applicationId "cn.net.xinyi.xmjt1"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
@@ -79,14 +79,14 @@ android {
         }
     }
 }
-apply plugin: 'replugin-plugin-gradle'
-
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':comm')
-    implementation project(':ocr:ocridcardlibrary')
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-    implementation project(':ocr:ocrplateidlibrary')
-    implementation project(':picturelib')
-    compile 'com.qihoo360.replugin:replugin-plugin-lib:2.3.0'
+    compile project(':picturelib')
 }
