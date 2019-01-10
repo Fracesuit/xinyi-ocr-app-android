@@ -7,22 +7,26 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.blankj.utilcode.util.FileIOUtils;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.blankj.utilcode.util.TimeUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.camera.camera2.CameraPreview;
 import com.camera.internal.utils.SDCardUtils2;
 import com.xinyi_tech.comm.CommCallBackListener;
 import com.xinyi_tech.comm.log.XinYiLog;
 
 import java.io.File;
 
-public class CamerasActivity extends AppCompatActivity {
+public class CamerasActivity2 extends AppCompatActivity {
 
 
     LiveCameraView liveCameraView;
     View sbtn_takephoto;
+    RelativeLayout rl;
     private File outputPath;
 
     private Camera camera;
@@ -45,21 +49,17 @@ public class CamerasActivity extends AppCompatActivity {
                 finish();
             }
         });
-        setContentView(R.layout.activity_camers);
+        setContentView(R.layout.activity_camers2);
+
+        liveCameraView=new LiveCameraView(getApplicationContext(),camera);
+
         initView();
       //  initData();
         initListener();
 
+        rl.addView(liveCameraView,0,new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
     }
-
-
-  /*  private void initData() {
-
-
-        Log.d("LiveCameraView", "initData");
-        liveCameraView.setCamera(camera);
-    }*/
 
     private void initListener() {
         sbtn_takephoto.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +68,7 @@ public class CamerasActivity extends AppCompatActivity {
                 liveCameraView.getCamera().takePicture(null, null, new Camera.PictureCallback() {
                     @Override
                     public void onPictureTaken(byte[] bytes, Camera camera) {
-                        CamerasActivity.this.onPictureTaken(bytes);
+                        CamerasActivity2.this.onPictureTaken(bytes);
                     }
                 });
             }
@@ -76,7 +76,7 @@ public class CamerasActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        liveCameraView = findViewById(R.id.live_camera_view);
+        rl = findViewById(R.id.rl);
         sbtn_takephoto = findViewById(R.id.sbtn_takephoto);
     }
 

@@ -26,12 +26,9 @@ public class LiveCameraView extends SurfaceView implements SurfaceHolder.Callbac
     private Camera mCamera;
     private SurfaceHolder mSurfaceHolder;
 
-    public LiveCameraView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public LiveCameraView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    public LiveCameraView(Context context, Camera camera) {
+        super(context);
+        this.mCamera = camera;
         mSurfaceHolder = this.getHolder();
         mSurfaceHolder.addCallback(this);
     }
@@ -47,7 +44,7 @@ public class LiveCameraView extends SurfaceView implements SurfaceHolder.Callbac
         if (mSurfaceHolder.getSurface() == null) {
             return;
         }
-        setCameraParams(width, height);
+        //setCameraParams(width, height);
 
         stopPreviewDisplay();
         startPreviewDisplay(mSurfaceHolder);

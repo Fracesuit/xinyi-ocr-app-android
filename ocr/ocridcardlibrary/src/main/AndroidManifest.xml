@@ -27,7 +27,7 @@
         <activity
             android:name="com.kernal.passportreader.sdk.IdcardOrcActivity"
             android:exported="false"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="kernal.idcard.MainActivity" />
 
@@ -88,7 +88,7 @@
         <activity
             android:name="kernal.idcard.android.IDCardBean"
             android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:exported="false">
             <intent-filter>
                 <action android:name="kernal.idcard" />
